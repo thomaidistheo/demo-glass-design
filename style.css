@@ -1,10 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --main-clr:#2a6d94;
+    --sec-clr:#4f8bad;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+}
+
 main { 
     min-height: 100vh;
     background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle1,
+.circle2 {
+    background: #fff;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+}
+
+.circle1 {
+    top: 5%;
+    right: 15%;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+}
+
+.glass-container {
+    width: 1000px;
+    height: 700px;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    background: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.1)
+    );
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    -moz-backdrop-filter: blur(1rem);
+}
+
+/* LEFT CONTAINER */
+
+.glass-container__info {
+    background: rgba(255, 255, 255, 0.4);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* PLAYER INFO */
+.player-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 33%;
+}
+
+.player-info img {
+    margin-bottom: 10px;
+}
+
+.player-name {
+    font-weight: 700;
+    color: var(--main-clr);
+}
+
+.player-title {
+    font-size: 12px;
+    color: var(--sec-clr);
+}
+
+/* PLAYER LINKS */
+
+.player-links {
+    list-style: none;
+    height: 33%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.player-links li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--main-clr);
+}
+
+/* PRO BANNER */
+
+.pro-banner {
+    height: 33%;
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.pro-banner-btn {
+    height: 70%;
+    font-size: 16px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px;
+    color: #fff;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+
+    border: none;
+    border-radius: 20px;
+    background: #65dfc9;
+    background: linear-gradient(
+        to right bottom, #65dfc9, #6cdbeb
+    );
+}
+
+.pro-banner img {
+    height: 120px;
+    width: auto;
 }
