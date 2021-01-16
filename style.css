@@ -272,12 +272,14 @@ main {
         background: var(--sec-clr);
     }
 
+    main {
+        align-items: flex-start;
+    }
+
     .glass-container {
         background: none;
         display: grid;
         grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: center;
     }
 
     .circle1, .circle2 {
@@ -287,7 +289,7 @@ main {
     /* TOP CONTAINER */
 
     .glass-container__info {
-        border-radius: 25px 25px 0 0;
+        border-radius: 0;
         padding: 5%;
     }
 
