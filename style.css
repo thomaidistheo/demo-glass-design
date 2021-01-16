@@ -20,7 +20,6 @@ html {
 
 main { 
     min-height: 100vh;
-    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,17 +268,21 @@ main {
 /* ! MEDIA QUERIES */
 
 @media (max-width: 960px) {
-    .glass-container {
-        width: 100vw;
-        height: 100vh;
+    html {
+        background: var(--sec-clr);
+    }
 
-        padding: 0 0 5% 0;
-    
+    .glass-container {
+        background: none;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 4fr;
         align-items: center;
         justify-content: center;
+    }
+
+    .circle1, .circle2 {
+        display: none;
     }
 
     /* TOP CONTAINER */
