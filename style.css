@@ -276,7 +276,6 @@ main {
         background: none;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 4fr;
         align-items: center;
         justify-content: center;
     }
@@ -299,8 +298,7 @@ main {
 
     .player-links {
         width: 50%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        flex-direction: row;
     }
 
     .player-links li {
