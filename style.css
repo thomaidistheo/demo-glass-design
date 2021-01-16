@@ -7,8 +7,10 @@
 }
 
 :root {
-    --main-clr:#2a6d94;
-    --sec-clr:#4f8bad;
+    --main-clr:#127d8d;
+    --sec-clr:#51b6aa;
+    --text-black: rgb(41, 41, 41);
+    --text-light: rgb(129, 129, 129);
 }
 
 html {
@@ -49,6 +51,8 @@ main {
 .glass-container {
     width: 1000px;
     height: 700px;
+    
+    border-radius: 25px;
 
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -64,11 +68,13 @@ main {
     -moz-backdrop-filter: blur(1rem);
 }
 
-/* LEFT CONTAINER */
+/* ------------ LEFT CONTAINER ------------ */
 
 .glass-container__info {
     background: rgba(255, 255, 255, 0.4);
     
+    border-radius: 25px 0 0 25px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,6 +139,8 @@ main {
     font-size: 16px;
     font-weight: 500;
 
+    cursor: pointer;
+
     display: flex;
     align-items: center;
 
@@ -146,9 +154,109 @@ main {
     background: linear-gradient(
         to right bottom, #65dfc9, #6cdbeb
     );
+
+    transition: 0.5s all ease-in-out;
+}
+
+.pro-banner-btn:hover {
+    background: #65dfc9;
+    background: linear-gradient(
+        to right bottom, #6cdbeb, #65dfc9
+    );
 }
 
 .pro-banner img {
     height: 120px;
     width: auto;
+}
+
+/* ------------ RIGHT CONTAINER ------------ */
+
+.glass-container__games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* BANNER */
+
+.banner {
+    width: 100%;
+    height: 15%;
+
+    padding: 0 100px 0 100px;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--main-clr);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner input {
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    width: 250px;
+    transition: 0.2s all ease;
+}
+
+.banner input:focus {
+    outline: none;
+    border-color: var(--sec-clr);
+    box-shadow: 0 2px 5px var(--sec-clr);
+}
+
+/* GAME LIST */
+
+.games-list {
+    width: 100%;
+    padding: 0 100px 0 100px;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    padding: 10px;
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    border-radius: 20px;
+}
+
+.game-title {
+    color: var(--text-black);
+}
+
+.game-platform {
+    color: var(--text-light);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background: white;
+    width: 250px;
+    height: 20px;
+    border-radius: 25px;
+}
+
+.progress-bar-inside {
+    background: linear-gradient(
+        to right bottom, #65dfc9, #6cdbeb
+    );
+    width: 85%;
+    height: 20px;
+    border-radius: 25px;
+}
+
+.percentage {
+    color: var(--sec-clr);
+    font-size: 18px;
 }
