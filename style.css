@@ -269,7 +269,7 @@ main {
 
 @media (max-width: 960px) {
     html {
-        background: var(--sec-clr);
+        background: #6BDCE5;
     }
 
     main {
